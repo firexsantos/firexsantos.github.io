@@ -3,303 +3,510 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Raja Kasir — Sistem kasir & manajemen ritel profesional</title>
-<meta name="description" content="Raja Kasir: aplikasi kasir (POS) dan manajemen toko untuk Windows dan Linux. Cepat di meja kasir, lengkap untuk pengelolaan toko, tetap bekerja tanpa internet, data sepenuhnya milik Anda.">
-<meta property="og:title" content="Raja Kasir — Sistem kasir & manajemen ritel profesional">
-<meta property="og:description" content="Kasir cepat, stok & kedaluwarsa, pembelian & hutang, pelanggan & poin, promo, laporan lengkap. Windows & Linux, tanpa internet.">
-<meta property="og:image" content="assets/kasir.png">
+<title>Aplikasi Kasir Offline untuk Toko &amp; Minimarket | Raja Kasir</title>
+<meta name="description" content="Raja Kasir: aplikasi kasir offline &amp; software POS untuk PC Windows dan Linux. Scan barcode, stok barang, kedaluwarsa, member, laporan laba. Tanpa biaya bulanan.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Firman Santosa, M.Kom — Raja Coding">
+<link rel="canonical" href="https://firexsantos.github.io/rajakasir/">
+<link rel="alternate" hreflang="id" href="https://firexsantos.github.io/rajakasir/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Raja Kasir">
+<meta property="og:url" content="https://firexsantos.github.io/rajakasir/">
+<meta property="og:title" content="Raja Kasir — Aplikasi Kasir Offline untuk Toko &amp; Minimarket">
+<meta property="og:description" content="Software kasir (POS) untuk PC Windows &amp; Linux: kasir cepat dengan scan barcode, stok barang &amp; kedaluwarsa, member &amp; poin, promo, laporan laba. Tetap jalan tanpa internet.">
+<meta property="og:image" content="https://firexsantos.github.io/rajakasir/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Layar kasir aplikasi Raja Kasir">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Raja Kasir — Aplikasi Kasir Offline untuk Toko &amp; Minimarket">
+<meta name="twitter:description" content="Software kasir untuk PC Windows &amp; Linux. Tetap jalan tanpa internet, lisensi tanpa biaya bulanan.">
+<meta name="twitter:image" content="https://firexsantos.github.io/rajakasir/assets/og-image.jpg">
 <meta name="theme-color" content="#07080f">
 <link rel="icon" type="image/png" href="assets/rajakasir-icon.png">
+<link rel="apple-touch-icon" href="assets/rajakasir-icon.png">
+<link rel="preload" as="image" href="assets/kasir.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://rajacoding.com/#org",
+      "name": "Raja Coding",
+      "url": "https://rajacoding.com",
+      "logo": "https://firexsantos.github.io/rajakasir/assets/rajakasir-icon.png",
+      "founder": { "@type": "Person", "name": "Firman Santosa, M.Kom" },
+      "contactPoint": { "@type": "ContactPoint", "telephone": "+62-812-1858-819", "contactType": "sales", "areaServed": "ID", "availableLanguage": ["Indonesian", "English"] }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://firexsantos.github.io/rajakasir/#website",
+      "url": "https://firexsantos.github.io/rajakasir/",
+      "name": "Raja Kasir",
+      "inLanguage": "id-ID",
+      "publisher": { "@id": "https://rajacoding.com/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://firexsantos.github.io/rajakasir/#app",
+      "name": "Raja Kasir",
+      "alternateName": ["Aplikasi Kasir Raja Kasir", "Raja Kasir POS"],
+      "description": "Aplikasi kasir offline dan software POS untuk toko, minimarket, toko kelontong dan grosir. Berjalan di PC Windows dan Linux, tetap bekerja tanpa internet.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Point of Sale",
+      "operatingSystem": "Windows 10, Windows 11, Ubuntu, Debian, Linux",
+      "softwareVersion": "0.7.1",
+      "dateModified": "2026-10-20",
+      "inLanguage": ["id", "en"],
+      "url": "https://firexsantos.github.io/rajakasir/",
+      "downloadUrl": "https://github.com/firexsantos/rajakasir-releases/releases/latest",
+      "installUrl": "https://github.com/firexsantos/rajakasir-releases/releases/latest",
+      "screenshot": ["https://firexsantos.github.io/rajakasir/assets/kasir.png", "https://firexsantos.github.io/rajakasir/assets/barang.png"],
+      "memoryRequirements": "4 GB RAM",
+      "storageRequirements": "500 MB",
+      "featureList": ["Kasir dengan scan barcode", "Tetap berjalan tanpa internet", "Stok barang per gudang dan rak", "Peringatan barang kedaluwarsa", "Pembelian dan hutang supplier", "Member dan poin belanja", "Promo dan harga grosir bertingkat", "PPN", "Laporan omzet dan laba", "Cetak struk thermal 58/76/80 mm", "Cetak label barcode", "Backup otomatis", "SQLite, MySQL/MariaDB, PostgreSQL"],
+      "author": { "@type": "Person", "name": "Firman Santosa, M.Kom" },
+      "publisher": { "@id": "https://rajacoding.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://firexsantos.github.io/rajakasir/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Apa itu Raja Kasir?", "acceptedAnswer": { "@type": "Answer", "text": "Raja Kasir adalah aplikasi kasir (software POS) untuk PC dan laptop Windows maupun Linux. Selain transaksi di meja kasir, Raja Kasir mengelola stok barang, pembelian ke supplier, pelanggan dan poin, promo, hingga laporan laba toko." } },
+        { "@type": "Question", "name": "Apakah Raja Kasir aplikasi kasir offline?", "acceptedAnswer": { "@type": "Answer", "text": "Ya. Raja Kasir berjalan di komputer toko Anda sendiri, jadi berjualan tetap lancar walaupun internet mati. Internet hanya dipakai untuk mengunduh pembaruan." } },
+        { "@type": "Question", "name": "Apakah ada biaya bulanan atau berlangganan?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak ada biaya berlangganan bulanan. Lisensi Raja Kasir berlaku seumur hidup untuk satu perangkat." } },
+        { "@type": "Question", "name": "Raja Kasir cocok untuk usaha apa saja?", "acceptedAnswer": { "@type": "Answer", "text": "Minimarket dan swalayan, toko kelontong dan sembako, grosir dan agen, toko bangunan, toko pakaian, kosmetik, aksesoris, serta toko ATK. Barang bisa dijual per satuan, per pak, atau per dus dengan harga grosir bertingkat." } },
+        { "@type": "Question", "name": "Apakah bisa dipakai di beberapa komputer kasir sekaligus?", "acceptedAnswer": { "@type": "Answer", "text": "Bisa. Untuk satu komputer cukup memakai SQLite tanpa server. Untuk beberapa komputer kasir yang memakai data yang sama, gunakan MySQL / MariaDB atau PostgreSQL di jaringan toko." } },
+        { "@type": "Question", "name": "Apakah data toko saya aman?", "acceptedAnswer": { "@type": "Answer", "text": "Data disimpan di komputer atau server database milik Anda sendiri dan tidak dikirim ke kami. Tersedia backup otomatis harian, backup saat aplikasi ditutup, dan pemulihan kapan saja." } },
+        { "@type": "Question", "name": "Saya memakai aplikasi kasir lama. Bisa pindah ke Raja Kasir?", "acceptedAnswer": { "@type": "Answer", "text": "Bisa. Raja Kasir mengimpor backup MySQL (.sql) dari aplikasi kasir lama dan daftar barang Excel (.xlsx / .csv), lengkap dengan pratinjau sebelum data disimpan." } },
+        { "@type": "Question", "name": "Perangkat apa saja yang didukung?", "acceptedAnswer": { "@type": "Answer", "text": "Printer struk thermal 58 / 76 / 80 mm, printer biasa untuk laporan A4 / F4, scanner barcode USB, laci kas yang tersambung ke printer struk, dan printer label barcode." } },
+        { "@type": "Question", "name": "Apakah pembaruan menghapus data?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak. Pembaruan hanya mengganti program. Data tersimpan terpisah dan dicadangkan otomatis bila struktur database perlu ditingkatkan." } },
+        { "@type": "Question", "name": "Apakah Raja Kasir tersedia untuk Android?", "acceptedAnswer": { "@type": "Answer", "text": "Raja Kasir dibuat untuk PC dan laptop dengan Windows 10 / 11 atau Linux (Ubuntu, Debian, dan distro lain lewat AppImage)." } },
+        { "@type": "Question", "name": "Komputer saya rusak atau diinstal ulang, bagaimana lisensinya?", "acceptedAnswer": { "@type": "Answer", "text": "Hubungi kami dengan nomor seri lisensi lama dan ID Perangkat baru untuk penggantian key, sesuai ketentuan perjanjian lisensi." } }
+      ]
+    }
+  ]
+}
+</script>
 <style>
   :root {
-    --bg: #07080f; --bg2: #0c0e1a; --card: rgba(255, 255, 255, .045); --card2: rgba(255, 255, 255, .07);
+    --bg: #07080f; --card: rgba(255, 255, 255, .045); --card2: rgba(255, 255, 255, .07);
     --line: rgba(160, 170, 255, .12); --line2: rgba(160, 170, 255, .22);
-    --text: #eef0ff; --text2: #b6bbdc; --text3: #7f86ad;
+    --text: #eef0ff; --text2: #b6bbdc; --text3: #8a91b8;
     --a1: #8b5cff; --a2: #36d6ff; --a3: #2dffb3;
     --grad: linear-gradient(120deg, var(--a1), var(--a2) 55%, var(--a3));
-    --radius: 20px; --max: 1160px;
+    --radius: 20px; --max: 1160px; --gap: clamp(96px, 11vw, 140px);
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  main { overflow-x: clip; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; height: auto; display: block; }
-  h1, h2, h3 { font-family: 'Space Grotesk', Inter, sans-serif; letter-spacing: -.02em; margin: 0; }
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', Inter, sans-serif; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  .head p, .hero .lead { text-wrap: pretty; }
+  p { margin: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
   .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: var(--a2); font-weight: 600; }
-
-  /* background glow */
-  .glow { position: fixed; inset: -20vh -20vw auto; height: 90vh; z-index: -1; pointer-events: none;
+  .small { font-size: 13.5px; color: var(--text3); }
+  .glow { position: absolute; inset: -20vh -20vw auto; height: 110vh; z-index: -1; pointer-events: none;
     background: radial-gradient(40% 50% at 25% 30%, rgba(139, 92, 255, .28), transparent 70%), radial-gradient(35% 45% at 75% 20%, rgba(54, 214, 255, .2), transparent 70%), radial-gradient(30% 40% at 60% 70%, rgba(45, 255, 179, .1), transparent 70%); filter: blur(10px); }
 
   /* nav */
-  nav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(7, 8, 15, .7); border-bottom: 1px solid var(--line); }
-  nav .wrap { display: flex; align-items: center; gap: 28px; height: 66px; }
+  nav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(7, 8, 15, .72); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; gap: 28px; height: 68px; }
   .brand { display: flex; align-items: center; gap: 10px; font: 700 18px 'Space Grotesk'; }
   .brand img { width: 34px; height: 34px; border-radius: 9px; }
-  .links { display: flex; gap: 22px; font-size: 14px; color: var(--text2); margin-left: auto; }
+  .links { display: flex; gap: 24px; font-size: 14px; color: var(--text2); margin-left: auto; }
   .links a:hover { color: var(--text); }
-  .btn { display: inline-flex; align-items: center; gap: 9px; height: 46px; padding: 0 22px; border-radius: 13px; font-weight: 600; font-size: 15px; border: 1px solid var(--line2); background: var(--card); transition: transform .15s, border-color .15s, background .15s; cursor: pointer; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 24px; border-radius: 13px; font-weight: 600; font-size: 15px; border: 1px solid var(--line2); background: var(--card); transition: transform .15s, border-color .15s, background .15s; cursor: pointer; }
   .btn:hover { transform: translateY(-1px); border-color: rgba(160, 170, 255, .4); background: var(--card2); }
   .btn.primary { background: var(--grad); color: #06070d; border: 0; box-shadow: 0 10px 40px -10px rgba(110, 120, 255, .7); }
-  .btn.sm { height: 38px; padding: 0 16px; font-size: 14px; border-radius: 11px; }
-  .btn svg { width: 18px; height: 18px; }
+  .btn.sm { min-height: 40px; padding: 0 16px; font-size: 14px; border-radius: 11px; }
+  .btn svg { width: 18px; height: 18px; flex: none; }
 
   /* hero */
-  .hero { padding: 84px 0 40px; text-align: center; }
-  .pill { display: inline-flex; gap: 8px; align-items: center; padding: 6px 14px; border-radius: 99px; border: 1px solid var(--line2); background: var(--card); font-size: 13px; color: var(--text2); }
+  .hero { position: relative; padding-top: 88px; text-align: center; }
+  .pill { display: inline-flex; gap: 8px; align-items: center; padding: 7px 15px; border-radius: 99px; border: 1px solid var(--line2); background: var(--card); font-size: 13px; color: var(--text2); }
   .pill b { color: var(--a3); font-weight: 600; }
-  .hero h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.04; margin: 22px 0 18px; }
-  .hero p.lead { font-size: clamp(17px, 2vw, 20px); color: var(--text2); max-width: 720px; margin: 0 auto; }
-  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 34px 0 14px; }
-  .small { font-size: 13px; color: var(--text3); }
-  .shot { margin: 56px auto 0; max-width: 1040px; border-radius: 22px; padding: 10px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); border: 1px solid var(--line2); box-shadow: 0 40px 120px -30px rgba(80, 90, 255, .45); }
-  .shot img { border-radius: 14px; }
+  .hero h1 { font-size: clamp(38px, 6vw, 70px); line-height: 1.06; margin: 26px auto 22px; max-width: 920px; }
+  .hero .lead { font-size: clamp(17px, 2vw, 20px); color: var(--text2); max-width: 760px; margin: 0 auto; }
+  .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 38px 0 16px; }
+  .shot { margin: 64px auto 0; max-width: 1040px; border-radius: 22px; padding: 10px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); border: 1px solid var(--line2); box-shadow: 0 40px 120px -30px rgba(80, 90, 255, .45); }
+  .shot img { border-radius: 14px; width: 100%; }
+  .strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; text-align: left; }
+  .strip div { padding: 20px 22px; border-radius: 16px; border: 1px solid var(--line); background: var(--card); }
+  .strip b { display: block; font: 600 17px 'Space Grotesk'; margin-bottom: 4px; }
+  .strip span { font-size: 14px; color: var(--text3); }
 
-  /* strip */
-  .strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 56px 0 0; }
-  .strip div { padding: 18px; border-radius: 16px; border: 1px solid var(--line); background: var(--card); }
-  .strip b { display: block; font: 600 17px 'Space Grotesk'; }
-  .strip span { font-size: 13.5px; color: var(--text3); }
-
-  section { padding: 96px 0 0; }
-  .head { text-align: center; max-width: 720px; margin: 0 auto 44px; }
-  .head h2 { font-size: clamp(30px, 4vw, 44px); margin: 10px 0 12px; }
-  .head p { color: var(--text2); margin: 0; }
+  /* sections */
+  .sec { padding-top: var(--gap); }
+  .head { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+  .head h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.15; margin: 12px 0 16px; }
+  .head p { color: var(--text2); }
+  .card { padding: 28px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: var(--line2); }
+  .card h3 { font-size: 18px; line-height: 1.3; margin-bottom: 10px; }
+  .card p { color: var(--text2); font-size: 15px; }
 
   /* features */
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .feat { padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); transition: border-color .2s, transform .2s; }
-  .feat:hover { border-color: var(--line2); transform: translateY(-2px); }
-  .ico { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(139,92,255,.25), rgba(54,214,255,.18)); border: 1px solid var(--line2); color: var(--a2); margin-bottom: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .ico { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(139,92,255,.25), rgba(54,214,255,.18)); border: 1px solid var(--line2); color: var(--a2); margin-bottom: 18px; }
   .ico svg { width: 22px; height: 22px; }
-  .feat h3 { font-size: 18px; margin-bottom: 6px; }
-  .feat p { margin: 0; color: var(--text2); font-size: 14.5px; }
 
   /* showcase */
-  .show { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
-  .show ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
-  .show li { display: flex; gap: 12px; color: var(--text2); }
-  .show li::before { content: ''; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 6px; background: var(--grad); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
-  .show .frame { border-radius: 18px; padding: 8px; border: 1px solid var(--line2); background: var(--card); }
-  .show .frame img { border-radius: 12px; }
+  .show { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+  .show h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin: 12px 0 14px; }
+  .show > div > p { color: var(--text2); }
+  .checks { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 16px; }
+  .checks li { display: flex; gap: 14px; color: var(--text2); line-height: 1.55; }
+  .checks li::before { content: ''; flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 7px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306070d' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat, var(--grad); }
+  .frame { border-radius: 18px; padding: 8px; border: 1px solid var(--line2); background: var(--card); }
+  .frame img { border-radius: 12px; width: 100%; }
+
+  /* business types */
+  .biz { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .biz .card h3 { display: flex; align-items: center; gap: 12px; }
+  .biz .emo { font-size: 24px; line-height: 1; }
+
+  /* comparison */
+  .compare { max-width: 980px; margin: 0 auto; border-radius: 22px; border: 1px solid var(--line2); overflow: hidden; background: var(--card); }
+  .compare table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .compare th, .compare td { padding: 18px 22px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .compare tr:last-child td { border-bottom: 0; }
+  .compare thead th { font: 600 15px 'Space Grotesk'; background: rgba(255,255,255,.03); }
+  .compare thead th:nth-child(2) { color: var(--a3); }
+  .compare td:first-child { color: var(--text); font-weight: 600; width: 30%; }
+  .compare td { color: var(--text2); }
+  .compare td:nth-child(2) { color: var(--text); background: rgba(45, 255, 179, .035); }
+  .note { max-width: 980px; margin: 18px auto 0; text-align: center; }
 
   /* steps */
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
-  .step { padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); position: relative; }
-  .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--grad); color: #06070d; font: 700 16px 'Space Grotesk'; margin-bottom: 14px; }
-  .step h3 { font-size: 17px; margin-bottom: 6px; }
-  .step p { margin: 0; color: var(--text2); font-size: 14.5px; }
-  .order { margin-top: 22px; display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 26px 28px; border-radius: 22px; border: 1px solid var(--line2);
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: s; }
+  .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--grad); color: #06070d; font: 700 16px 'Space Grotesk'; margin-bottom: 18px; }
+  .order { margin-top: 28px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 30px 32px; border-radius: 22px; border: 1px solid var(--line2);
     background: linear-gradient(120deg, rgba(139,92,255,.16), rgba(54,214,255,.1) 60%, rgba(45,255,179,.08)); }
-  .order h3 { font-size: 22px; }
-  .order p { margin: 4px 0 0; color: var(--text2); }
+  .order h3 { font-size: 22px; margin-bottom: 6px; }
+  .order p { color: var(--text2); }
 
   /* downloads */
-  .dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .dl a { display: flex; flex-direction: column; gap: 6px; padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); transition: border-color .2s, transform .2s; }
+  .dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .dl a { display: flex; flex-direction: column; gap: 8px; }
   .dl a:hover { border-color: var(--a2); transform: translateY(-2px); }
-  .dl .os { display: flex; align-items: center; gap: 10px; font: 600 18px 'Space Grotesk'; }
+  .dl .os { display: flex; align-items: center; gap: 12px; font: 600 19px 'Space Grotesk'; margin-bottom: 4px; }
   .dl .os svg { width: 26px; height: 26px; color: var(--a2); }
-  .dl .file { font: 13px ui-monospace, monospace; color: var(--text3); word-break: break-all; }
-  .dl .go { margin-top: 8px; color: var(--a2); font-weight: 600; font-size: 14px; }
-  .req { margin-top: 18px; text-align: center; color: var(--text3); font-size: 14px; }
+  .dl .file { font: 13px/1.5 ui-monospace, monospace; color: var(--text3); overflow-wrap: anywhere; }
+  .dl .go { margin-top: 10px; color: var(--a2); font-weight: 600; font-size: 14px; }
+  .req { margin: 28px auto 0; max-width: 820px; text-align: center; color: var(--text3); font-size: 14px; }
 
   /* history */
-  .hist { max-width: 860px; margin: 0 auto; display: grid; gap: 12px; }
+  .hist { max-width: 860px; margin: 0 auto; display: grid; gap: 14px; }
   .rel { border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
-  .rel summary { list-style: none; cursor: pointer; padding: 18px 22px; display: flex; align-items: center; gap: 12px; }
+  .rel summary { list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   .rel summary::-webkit-details-marker { display: none; }
   .rel summary b { font: 600 17px 'Space Grotesk'; }
   .rel summary .date { color: var(--text3); font-size: 13.5px; margin-left: auto; }
   .rel summary .tag { font-size: 11.5px; padding: 3px 9px; border-radius: 99px; background: var(--grad); color: #06070d; font-weight: 700; }
   .rel[open] summary { border-bottom: 1px solid var(--line); }
-  .rel .body { padding: 6px 24px 20px; color: var(--text2); font-size: 14.5px; }
-  .rel .body h4 { color: var(--text); margin: 16px 0 6px; font: 600 15px 'Space Grotesk'; }
+  .rel .body { padding: 8px 26px 22px; color: var(--text2); font-size: 14.5px; }
+  .rel .body h4 { color: var(--text); margin: 18px 0 8px; font: 600 15px 'Space Grotesk'; }
+  .rel .body p { margin: 8px 0; }
   .rel .body ul { margin: 6px 0; padding-left: 20px; }
-  .rel .body li { margin: 4px 0; }
+  .rel .body li { margin: 6px 0; }
   .rel .body strong { color: var(--text); }
   .rel .body code { font-size: 13px; padding: 1px 6px; border-radius: 6px; background: var(--card2); }
-  .more { text-align: center; margin-top: 18px; }
+  .more { text-align: center; margin-top: 28px; }
 
   /* faq */
-  .faq { max-width: 860px; margin: 0 auto; display: grid; gap: 10px; }
-  .faq details { border-radius: 16px; border: 1px solid var(--line); background: var(--card); padding: 0 22px; }
-  .faq summary { cursor: pointer; padding: 18px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
-  .faq summary::after { content: '+'; color: var(--a2); font-size: 20px; line-height: 1; }
+  .faq { max-width: 860px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq details { border-radius: 16px; border: 1px solid var(--line); background: var(--card); padding: 0 24px; }
+  .faq summary { cursor: pointer; padding: 20px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary h3 { font: 600 16px/1.4 Inter, sans-serif; letter-spacing: 0; }
+  .faq summary::after { content: '+'; color: var(--a2); font-size: 22px; line-height: 1; flex: none; }
   .faq details[open] summary::after { content: '−'; }
-  .faq p { margin: 0 0 18px; color: var(--text2); }
+  .faq details p { padding: 0 0 22px; color: var(--text2); }
+
+  /* closing cta */
+  .final { text-align: center; padding: 56px 32px; border-radius: 28px; border: 1px solid var(--line2);
+    background: radial-gradient(60% 120% at 50% 0%, rgba(139,92,255,.22), transparent 70%), var(--card); }
+  .final h2 { font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 14px; }
+  .final p { color: var(--text2); max-width: 620px; margin: 0 auto; }
 
   /* footer */
-  footer { margin-top: 110px; border-top: 1px solid var(--line); padding: 54px 0 40px; background: linear-gradient(180deg, transparent, rgba(139,92,255,.05)); }
-  .foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
-  .foot h4 { margin: 0 0 12px; font: 600 14px 'Space Grotesk'; color: var(--text); letter-spacing: .02em; }
-  .foot a, .foot p { display: block; color: var(--text2); font-size: 14px; margin: 0 0 8px; }
+  footer { margin-top: var(--gap); border-top: 1px solid var(--line); padding: 60px 0 44px; background: linear-gradient(180deg, transparent, rgba(139,92,255,.05)); }
+  .foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; }
+  .foot h4 { margin: 0 0 14px; font: 600 14px 'Space Grotesk'; color: var(--text); letter-spacing: .02em; }
+  .foot a, .foot p { display: block; color: var(--text2); font-size: 14px; margin: 0 0 10px; }
   .foot a:hover { color: var(--text); }
-  .dev { display: flex; gap: 14px; align-items: center; margin-top: 16px; }
-  .dev img { width: 150px; }
-  .copy { margin-top: 40px; color: var(--text3); font-size: 13px; text-align: center; }
+  .dev img { width: 150px; margin-top: 18px; }
+  .copy { margin-top: 44px; color: var(--text3); font-size: 13px; text-align: center; }
 
   .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-  @media (max-width: 960px) {
+  @media (max-width: 1020px) {
     .links { display: none; }
-    .grid, .dl { grid-template-columns: 1fr 1fr; }
+    nav .btn { margin-left: auto; }
+    .grid, .dl, .biz { grid-template-columns: 1fr 1fr; }
     .steps, .strip { grid-template-columns: 1fr 1fr; }
-    .show, .foot { grid-template-columns: 1fr; }
+    .show { grid-template-columns: 1fr; gap: 40px; }
+    .foot { grid-template-columns: 1fr 1fr; }
   }
-  @media (max-width: 600px) {
-    .wrap { padding: 0 16px; }
-    .grid, .dl, .steps, .strip { grid-template-columns: 1fr; }
+  @media (max-width: 640px) {
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    .grid, .dl, .steps, .strip, .biz, .foot { grid-template-columns: 1fr; }
     nav .btn { display: none; }
     .hero { padding-top: 56px; }
+    .head { margin-bottom: 40px; }
+    .card { padding: 24px; }
+    .order { padding: 26px 22px; }
+    .order .btn { width: 100%; }
+    .compare tr { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
+    .compare tbody tr:last-child { border-bottom: 0; }
+    .compare th, .compare td { padding: 12px 16px; font-size: 14px; border-bottom: 0; }
+    .compare thead th:first-child { display: none; }
+    .compare td:first-child { grid-column: 1 / -1; width: auto; padding-bottom: 0; color: var(--a2); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .final { padding: 44px 20px; }
   }
 </style>
 </head>
 <body>
-<div class="glow" aria-hidden="true"></div>
 
-<nav>
+<nav aria-label="Navigasi utama">
   <div class="wrap">
-    <a class="brand" href="#"><img src="assets/rajakasir-icon.png" alt="">Raja Kasir</a>
+    <a class="brand" href="./"><img src="assets/rajakasir-icon.png" alt="Logo Raja Kasir" width="34" height="34">Raja Kasir</a>
     <div class="links">
-      <a href="#fitur">Fitur</a><a href="#pesan">Pemesanan</a><a href="#unduh">Unduh</a><a href="#riwayat">Riwayat versi</a><a href="#faq">Tanya jawab</a>
+      <a href="#fitur">Fitur</a><a href="#usaha">Jenis usaha</a><a href="#offline">Kasir offline</a><a href="#unduh">Unduh</a><a href="#riwayat">Riwayat versi</a><a href="#faq">Tanya jawab</a>
     </div>
     <a class="btn sm primary" href="#pesan">Pesan lisensi</a>
   </div>
 </nav>
 
+<main>
 <header class="hero wrap">
-  <span class="pill"><b>●</b> <span id="ver">Versi terbaru</span> · Windows &amp; Linux</span>
-  <h1>Kasir cepat.<br><span class="grad">Toko lebih tertata.</span></h1>
-  <p class="lead">Raja Kasir adalah sistem kasir &amp; manajemen ritel profesional — cepat di meja kasir, lengkap untuk pengelolaan toko, tetap bekerja tanpa internet, dan data sepenuhnya milik Anda.</p>
+  <div class="glow" aria-hidden="true"></div>
+  <span class="pill"><b>●</b> <span id="ver">Versi 0.7.1</span> · Windows &amp; Linux</span>
+  <h1>Aplikasi Kasir Offline <span class="grad">untuk Toko &amp; Minimarket</span></h1>
+  <p class="lead">Raja Kasir adalah <strong>software kasir (POS)</strong> untuk PC dan laptop Windows maupun Linux — kasir cepat dengan scan barcode, stok barang lengkap, laporan laba, dan tetap berjualan walaupun internet mati. Tanpa biaya bulanan.</p>
   <div class="cta">
     <a class="btn primary" id="dl-main" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-      <span id="dl-main-label">Unduh Raja Kasir</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      <span id="dl-main-label">Download aplikasi kasir</span>
     </a>
     <a class="btn" href="https://wa.me/628121858819?text=Halo%20Raja%20Coding%2C%20saya%20ingin%20memesan%20lisensi%20Raja%20Kasir." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
       Pesan via WhatsApp
     </a>
   </div>
-  <div class="small" id="dl-note">Gratis diunduh · aktifkan dengan key lisensi · satu key untuk satu perangkat, seumur hidup</div>
-  <div class="shot reveal"><img src="assets/kasir.png" alt="Layar kasir Raja Kasir" width="1440" height="900"></div>
+  <p class="small">Gratis diunduh · aktifkan dengan key lisensi · satu key untuk satu perangkat, seumur hidup</p>
+  <div class="shot reveal">
+    <picture>
+      <source srcset="assets/kasir.webp" type="image/webp">
+      <img src="assets/kasir.png" alt="Tampilan layar kasir Raja Kasir: scan barcode, daftar belanja, total, dan pembayaran tunai atau QRIS" width="1440" height="900" fetchpriority="high">
+    </picture>
+  </div>
   <div class="strip reveal">
-    <div><b>Tanpa internet</b><span>Berjualan tetap jalan saat koneksi putus</span></div>
+    <div><b>Kasir offline</b><span>Berjualan tetap jalan saat internet putus</span></div>
+    <div><b>Tanpa biaya bulanan</b><span>Lisensi seumur hidup untuk satu perangkat</span></div>
     <div><b>Data milik Anda</b><span>Tersimpan di komputer atau server sendiri</span></div>
-    <div><b>Lisensi seumur hidup</b><span>Satu key untuk satu perangkat</span></div>
     <div><b>Bahasa Indonesia</b><span>Juga tersedia dalam Bahasa Inggris</span></div>
   </div>
 </header>
 
-<section id="fitur" class="wrap">
+<section id="fitur" class="sec wrap" aria-labelledby="fitur-h">
   <div class="head reveal">
-    <div class="eyebrow">Fitur</div>
-    <h2>Semua yang dibutuhkan toko, <span class="grad">dalam satu aplikasi</span></h2>
-    <p>Dari meja kasir sampai gudang, dari pembelian ke supplier sampai laporan laba — tanpa berlangganan, tanpa ribet.</p>
+    <div class="eyebrow">Fitur aplikasi kasir</div>
+    <h2 id="fitur-h">Software kasir toko yang <span class="grad">lengkap dalam satu aplikasi</span></h2>
+    <p>Dari meja kasir sampai gudang, dari pembelian ke supplier sampai laporan laba — semua fitur program kasir yang dibutuhkan toko ada di sini, tanpa berlangganan.</p>
   </div>
-  <div class="grid" id="features"></div>
+  <div class="grid">
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10M12 7v10M16 7v10"/></svg></div>
+      <h3>Kasir cepat dengan scan barcode</h3><p>Scan barcode barang maupun barcode dus, cari nama, beri diskon, bayar tunai / QRIS / transfer / kartu, tahan transaksi — semuanya bisa lewat keyboard.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M9 16l2 2 4-4"/></svg></div>
+      <h3>Stok barang &amp; kedaluwarsa</h3><p>Kedaluwarsa per batch dengan peringatan di menu dan dasbor, pemusnahan dengan berita acara, stok opname, serta pecah barang dus ke eceran.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 8.4V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.4a2 2 0 0 1 1.2-1.8l8-3.6a2 2 0 0 1 1.6 0l8 3.6A2 2 0 0 1 22 8.4Z"/><path d="M6 18h12M6 14h12"/></svg></div>
+      <h3>Gudang, rak &amp; transfer stok</h3><p>Stok per gudang dan rak, barang masuk langsung ke gudang, transfer antar lokasi dengan surat jalan, dan saran isi ulang rak toko.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+      <h3>Pembelian &amp; hutang supplier</h3><p>Purchase order, barang masuk tunai atau tempo, hutang supplier dengan umur hutang, dan retur barang ke supplier.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+      <h3>Member &amp; poin belanja</h3><p>Data pelanggan dengan poin yang bisa ditukar di kasir, harga khusus member, serta riwayat dan barang favorit tiap pelanggan.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+      <h3>Harga grosir, promo &amp; PPN</h3><p>Harga grosir bertingkat, jual per pcs / pak / dus, promo persen, potongan nominal, harga spesial, beli X gratis Y, serta PPN inklusif atau eksklusif.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+      <h3>Laporan penjualan &amp; laba</h3><p>Omzet, laba kotor, barang terlaris, pelanggan, pajak, kerugian, jam ramai, dan nilai persediaan — cetak A4 atau ekspor ke Excel.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <h3>Sesi kasir &amp; hitung laci</h3><p>Modal awal di awal shift, kas masuk / keluar, hitung uang di laci per pecahan saat tutup sesi, dan selisih kas tercatat per kasir.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></div>
+      <h3>Struk thermal &amp; label barcode</h3><p>Pembuat struk dengan 6 template untuk printer thermal 58 / 76 / 80 mm, pratinjau sebelum cetak, dan cetak label barcode untuk stiker A4 atau printer label.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.9-3.9a3 3 0 0 0-4.2 0l-.9.9a1 1 0 1 1-3-3l2.8-2.8a5.8 5.8 0 0 1 7 .9L21 7"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg></div>
+      <h3>Penjualan grosir &amp; piutang</h3><p>Faktur untuk reseller dan mitra, pembayaran cicilan, umur piutang per mitra, dan cetak faktur A4.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3>Backup otomatis &amp; hak akses</h3><p>Backup harian dan saat aplikasi ditutup, pulihkan kapan saja, login dengan PIN, hak akses per kasir, dan log aktivitas.</p></article>
+    <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+      <h3>Satu atau banyak komputer kasir</h3><p>SQLite tanpa server untuk satu komputer, atau MySQL / MariaDB / PostgreSQL untuk beberapa komputer kasir dengan data yang sama.</p></article>
+  </div>
 </section>
 
-<section class="wrap">
+<section class="sec wrap" aria-labelledby="barang-h">
   <div class="show">
     <div class="reveal">
-      <div class="eyebrow">Manajemen barang</div>
-      <h2 style="font-size:clamp(28px,3.4vw,40px);margin-top:10px">Puluhan ribu barang, <span class="grad">tetap lancar</span></h2>
-      <ul>
-        <li>Filter lengkap: kategori, supplier, lokasi rak, stok menipis, kedaluwarsa, margin</li>
-        <li>Ubah harga banyak barang sekaligus dengan pratinjau, riwayat harga tersimpan</li>
-        <li>Satuan dus / pak dengan barcode sendiri, harga grosir bertingkat &amp; harga member</li>
+      <div class="eyebrow">Aplikasi stok barang</div>
+      <h2 id="barang-h">Puluhan ribu barang, <span class="grad">tetap lancar</span></h2>
+      <p>Kelola data barang toko tanpa ribet — cari, saring, dan ubah harga dalam hitungan detik.</p>
+      <ul class="checks">
+        <li>Filter lengkap: kategori, supplier, lokasi rak, stok menipis, kedaluwarsa, dan margin</li>
+        <li>Ubah harga banyak barang sekaligus dengan pratinjau; riwayat harga tersimpan</li>
+        <li>Satuan pak dan dus dengan barcode sendiri, harga grosir bertingkat, dan harga member</li>
         <li>Cetak label barcode untuk stiker A4 atau printer label</li>
         <li>Pindah dari aplikasi kasir lama: impor backup MySQL (.sql) atau Excel</li>
       </ul>
     </div>
-    <div class="frame reveal"><img src="assets/barang.png" alt="Manajemen barang Raja Kasir" width="1440" height="900"></div>
+    <div class="frame reveal">
+      <picture>
+        <source srcset="assets/barang.webp" type="image/webp">
+        <img src="assets/barang.png" alt="Halaman manajemen stok barang Raja Kasir dengan barcode, kategori, harga, margin, stok, dan lokasi rak" width="1440" height="900" loading="lazy" decoding="async">
+      </picture>
+    </div>
   </div>
 </section>
 
-<section id="pesan" class="wrap">
+<section id="usaha" class="sec wrap" aria-labelledby="usaha-h">
+  <div class="head reveal">
+    <div class="eyebrow">Jenis usaha</div>
+    <h2 id="usaha-h">Aplikasi kasir untuk <span class="grad">berbagai jenis toko</span></h2>
+    <p>Satu aplikasi kasir PC yang menyesuaikan cara toko Anda berjualan — eceran, grosir, atau keduanya.</p>
+  </div>
+  <div class="biz">
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">🏪</span>Minimarket &amp; swalayan</h3><p>Ribuan barang dengan barcode, beberapa kasir sekaligus, member dan poin, promo mingguan, serta peringatan barang kedaluwarsa.</p></article>
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">🛒</span>Toko kelontong &amp; sembako</h3><p>Kasir sederhana dan cepat, jual eceran maupun per dus, cari barang tanpa barcode cukup dengan nama, dan hitung laci di akhir hari.</p></article>
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">📦</span>Grosir &amp; agen</h3><p>Harga bertingkat sesuai jumlah beli, faktur untuk reseller, piutang mitra dengan cicilan, dan stok per gudang.</p></article>
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">🧱</span>Toko bangunan &amp; material</h3><p>Satuan berbeda per barang (sak, batang, meter, dus), hutang ke supplier dengan tempo, dan stok di gudang terpisah dari toko.</p></article>
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">👕</span>Toko pakaian, kosmetik &amp; aksesoris</h3><p>Label barcode cetak sendiri, promo dan diskon musiman, member dengan poin, serta laporan barang terlaris.</p></article>
+    <article class="card reveal"><h3><span class="emo" aria-hidden="true">✏️</span>Toko ATK, fotokopi &amp; lainnya</h3><p>Barang banyak dengan harga kecil, pencarian cepat, kasir dengan keyboard, dan laporan laba harian hingga tahunan.</p></article>
+  </div>
+</section>
+
+<section id="offline" class="sec wrap" aria-labelledby="offline-h">
+  <div class="head reveal">
+    <div class="eyebrow">Kasir offline vs online</div>
+    <h2 id="offline-h">Kenapa memilih <span class="grad">aplikasi kasir offline?</span></h2>
+    <p>Aplikasi kasir online (cloud) bergantung pada koneksi internet dan biasanya dibayar per bulan. Raja Kasir berjalan langsung di komputer toko, jadi transaksi tetap cepat dan tidak berhenti saat jaringan bermasalah.</p>
+  </div>
+  <div class="compare reveal">
+    <table>
+      <thead><tr><th scope="col">Perbandingan</th><th scope="col">Raja Kasir (offline)</th><th scope="col">Aplikasi kasir online umumnya</th></tr></thead>
+      <tbody>
+        <tr><td>Internet mati</td><td>Tetap berjualan seperti biasa</td><td>Bergantung koneksi; sebagian punya mode offline terbatas</td></tr>
+        <tr><td>Biaya</td><td>Lisensi sekali bayar, tanpa biaya bulanan</td><td>Umumnya berlangganan per bulan atau per tahun</td></tr>
+        <tr><td>Lokasi data</td><td>Komputer atau server milik toko sendiri</td><td>Server penyedia layanan</td></tr>
+        <tr><td>Kecepatan scan</td><td>Langsung dari komputer, tetap cepat dengan puluhan ribu barang</td><td>Dipengaruhi kecepatan jaringan</td></tr>
+        <tr><td>Beberapa kasir</td><td>Lewat MySQL / MariaDB / PostgreSQL di jaringan toko</td><td>Lewat internet</td></tr>
+        <tr><td>Pantau dari luar toko</td><td>Perlu jaringan atau VPN sendiri</td><td>Bisa dari mana saja</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note small">Perbandingan bersifat umum; fitur aplikasi kasir online berbeda-beda di tiap penyedia.</p>
+</section>
+
+<section id="pesan" class="sec wrap" aria-labelledby="pesan-h">
   <div class="head reveal">
     <div class="eyebrow">Cara pemesanan</div>
-    <h2>Aktif dalam <span class="grad">hitungan menit</span></h2>
+    <h2 id="pesan-h">Aktif dalam <span class="grad">hitungan menit</span></h2>
     <p>Lisensi berlaku seumur hidup untuk satu perangkat, tanpa biaya bulanan.</p>
   </div>
   <div class="steps">
-    <div class="step reveal"><h3>Unduh &amp; pasang</h3><p>Pasang Raja Kasir di komputer kasir Anda — Windows atau Linux.</p></div>
-    <div class="step reveal"><h3>Kirim ID Perangkat</h3><p>Saat pertama dibuka, Raja Kasir menampilkan ID Perangkat. Kirimkan ke kami lewat WhatsApp.</p></div>
-    <div class="step reveal"><h3>Terima key lisensi</h3><p>Setelah pembayaran, Anda menerima key lisensi khusus untuk perangkat tersebut.</p></div>
-    <div class="step reveal"><h3>Aktifkan &amp; jualan</h3><p>Tempel key, atur profil toko, impor data barang, dan mulai berjualan.</p></div>
+    <div class="card step reveal"><h3>Unduh &amp; pasang</h3><p>Pasang Raja Kasir di komputer kasir Anda — Windows atau Linux.</p></div>
+    <div class="card step reveal"><h3>Kirim ID Perangkat</h3><p>Saat pertama dibuka, Raja Kasir menampilkan ID Perangkat. Kirimkan ke kami lewat WhatsApp.</p></div>
+    <div class="card step reveal"><h3>Terima key lisensi</h3><p>Setelah pembayaran, Anda menerima key lisensi khusus untuk perangkat tersebut.</p></div>
+    <div class="card step reveal"><h3>Aktifkan &amp; jualan</h3><p>Tempel key, atur profil toko, impor data barang, dan mulai berjualan.</p></div>
   </div>
   <div class="order reveal">
     <div><h3>Siap memakai Raja Kasir?</h3><p>Tanyakan harga, demo, atau bantuan pemasangan — kami bantu sampai toko Anda siap.</p></div>
     <a class="btn primary" href="https://wa.me/628121858819?text=Halo%20Raja%20Coding%2C%20saya%20ingin%20memesan%20lisensi%20Raja%20Kasir." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
       WhatsApp +62 812-1858-819
     </a>
   </div>
 </section>
 
-<section id="unduh" class="wrap">
+<section id="unduh" class="sec wrap" aria-labelledby="unduh-h">
   <div class="head reveal">
-    <div class="eyebrow">Unduh</div>
-    <h2>Pilih sesuai <span class="grad">sistem operasi</span></h2>
+    <div class="eyebrow">Download</div>
+    <h2 id="unduh-h">Download aplikasi kasir <span class="grad">untuk PC &amp; laptop</span></h2>
     <p id="dl-sub">Installer resmi dari halaman rilis GitHub. Keaslian berkas dapat diperiksa dengan SHA256SUMS.txt.</p>
   </div>
   <div class="dl reveal">
-    <a id="dl-win" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
-      <span class="os"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.4 10.4 4.4v7.1H3zm8.3-1.1L21 3v8.5h-9.7zM3 12.5h7.4v7.1L3 18.6zm8.3 0H21V21l-9.7-1.3z"/></svg>Windows</span>
-      <span class="small">Windows 10 / 11 · 64-bit</span><span class="file" data-ext=".exe">rajakasir-setup-&lt;versi&gt;.exe</span><span class="go">Unduh installer →</span>
+    <a class="card" id="dl-win" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
+      <span class="os"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.4 10.4 4.4v7.1H3zm8.3-1.1L21 3v8.5h-9.7zM3 12.5h7.4v7.1L3 18.6zm8.3 0H21V21l-9.7-1.3z"/></svg>Windows</span>
+      <span class="small">Windows 10 / 11 · 64-bit</span><span class="file">rajakasir-setup-&lt;versi&gt;.exe</span><span class="go">Unduh installer →</span>
     </a>
-    <a id="dl-deb" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
-      <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v5.8M4.2 16.5l5-2.9m10.6 2.9-5-2.9"/></svg>Ubuntu / Debian</span>
-      <span class="small">Paket .deb · 64-bit</span><span class="file" data-ext=".deb">rajakasir-&lt;versi&gt;-amd64.deb</span><span class="go">Unduh paket →</span>
+    <a class="card" id="dl-deb" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
+      <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v5.8M4.2 16.5l5-2.9m10.6 2.9-5-2.9"/></svg>Ubuntu / Debian</span>
+      <span class="small">Paket .deb · 64-bit</span><span class="file">rajakasir-&lt;versi&gt;-amd64.deb</span><span class="go">Unduh paket →</span>
     </a>
-    <a id="dl-appimage" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
-      <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>Linux lainnya</span>
-      <span class="small">AppImage · 64-bit · tanpa instalasi</span><span class="file" data-ext=".AppImage">rajakasir-&lt;versi&gt;-x86_64.AppImage</span><span class="go">Unduh AppImage →</span>
+    <a class="card" id="dl-appimage" href="https://github.com/firexsantos/rajakasir-releases/releases/latest">
+      <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>Linux lainnya</span>
+      <span class="small">AppImage · 64-bit · tanpa instalasi</span><span class="file">rajakasir-&lt;versi&gt;-x86_64.AppImage</span><span class="go">Unduh AppImage →</span>
     </a>
   </div>
   <p class="req">Kebutuhan minimum: prosesor 64-bit · RAM 4 GB · ruang kosong 500 MB · layar 1366×768. Printer struk thermal, scanner barcode, dan laci kas opsional.</p>
 </section>
 
-<section id="riwayat" class="wrap">
+<section id="riwayat" class="sec wrap" aria-labelledby="riwayat-h">
   <div class="head reveal">
     <div class="eyebrow">Riwayat versi</div>
-    <h2>Terus <span class="grad">berkembang</span></h2>
+    <h2 id="riwayat-h">Terus <span class="grad">berkembang</span></h2>
     <p>Pembaruan diunduh otomatis di dalam aplikasi dan dipasang saat Anda memilih — data tidak tersentuh.</p>
   </div>
-  <div class="hist" id="history"><p class="small" style="text-align:center">Memuat riwayat versi…</p></div>
+  <div class="hist" id="history"><p class="small" style="text-align:center">Riwayat versi lengkap ada di <a style="color:var(--a2)" href="https://github.com/firexsantos/rajakasir-releases/releases">halaman rilis GitHub</a>.</p></div>
   <div class="more"><a class="btn sm" href="https://github.com/firexsantos/rajakasir-releases/releases">Semua rilis di GitHub →</a></div>
 </section>
 
-<section id="faq" class="wrap">
-  <div class="head reveal"><div class="eyebrow">Tanya jawab</div><h2>Pertanyaan yang <span class="grad">sering diajukan</span></h2></div>
+<section id="faq" class="sec wrap" aria-labelledby="faq-h">
+  <div class="head reveal"><div class="eyebrow">Tanya jawab</div><h2 id="faq-h">Pertanyaan seputar <span class="grad">aplikasi kasir</span></h2></div>
   <div class="faq reveal">
-    <details><summary>Apakah data toko saya aman?</summary><p>Ya. Data disimpan di komputer Anda sendiri (atau server database milik Anda). Raja Kasir tidak mengirim data usaha Anda ke kami. Backup otomatis harian dan backup saat aplikasi ditutup tersedia di dalam aplikasi.</p></details>
-    <details><summary>Apakah butuh internet?</summary><p>Tidak untuk berjualan. Internet hanya dipakai untuk mengunduh pembaruan.</p></details>
-    <details><summary>Database apa yang didukung?</summary><p>SQLite (otomatis, tanpa server — cocok untuk satu komputer), MySQL / MariaDB, atau PostgreSQL untuk beberapa komputer kasir yang memakai data yang sama.</p></details>
-    <details><summary>Apakah pembaruan menghapus data?</summary><p>Tidak. Pembaruan hanya mengganti program; data tersimpan terpisah dan dicadangkan otomatis bila struktur database perlu ditingkatkan.</p></details>
-    <details><summary>Saya memakai aplikasi kasir lama. Bisa pindah?</summary><p>Bisa. Raja Kasir mengimpor backup MySQL (.sql) aplikasi kasir lama dan daftar barang Excel (.xlsx / .csv), lengkap dengan pratinjau sebelum data disimpan.</p></details>
-    <details><summary>Komputer saya rusak atau install ulang, bagaimana lisensinya?</summary><p>Hubungi kami dengan nomor seri lisensi lama dan ID Perangkat baru untuk penggantian key, sesuai ketentuan perjanjian lisensi.</p></details>
-    <details><summary>Perangkat apa saja yang didukung?</summary><p>Printer struk thermal 58 / 76 / 80 mm, printer biasa untuk laporan A4 / F4, scanner barcode (USB), laci kas yang tersambung ke printer struk, dan printer label.</p></details>
+    <details><summary><h3>Apa itu Raja Kasir?</h3></summary><p>Raja Kasir adalah aplikasi kasir (software POS) untuk PC dan laptop Windows maupun Linux. Selain transaksi di meja kasir, Raja Kasir mengelola stok barang, pembelian ke supplier, pelanggan dan poin, promo, hingga laporan laba toko.</p></details>
+    <details><summary><h3>Apakah Raja Kasir aplikasi kasir offline?</h3></summary><p>Ya. Raja Kasir berjalan di komputer toko Anda sendiri, jadi berjualan tetap lancar walaupun internet mati. Internet hanya dipakai untuk mengunduh pembaruan.</p></details>
+    <details><summary><h3>Apakah ada biaya bulanan atau berlangganan?</h3></summary><p>Tidak ada biaya berlangganan bulanan. Lisensi Raja Kasir berlaku seumur hidup untuk satu perangkat.</p></details>
+    <details><summary><h3>Raja Kasir cocok untuk usaha apa saja?</h3></summary><p>Minimarket dan swalayan, toko kelontong dan sembako, grosir dan agen, toko bangunan, toko pakaian, kosmetik, aksesoris, serta toko ATK. Barang bisa dijual per satuan, per pak, atau per dus dengan harga grosir bertingkat.</p></details>
+    <details><summary><h3>Apakah bisa dipakai di beberapa komputer kasir sekaligus?</h3></summary><p>Bisa. Untuk satu komputer cukup memakai SQLite tanpa server. Untuk beberapa komputer kasir yang memakai data yang sama, gunakan MySQL / MariaDB atau PostgreSQL di jaringan toko.</p></details>
+    <details><summary><h3>Apakah data toko saya aman?</h3></summary><p>Data disimpan di komputer atau server database milik Anda sendiri dan tidak dikirim ke kami. Tersedia backup otomatis harian, backup saat aplikasi ditutup, dan pemulihan kapan saja.</p></details>
+    <details><summary><h3>Saya memakai aplikasi kasir lama. Bisa pindah ke Raja Kasir?</h3></summary><p>Bisa. Raja Kasir mengimpor backup MySQL (.sql) dari aplikasi kasir lama dan daftar barang Excel (.xlsx / .csv), lengkap dengan pratinjau sebelum data disimpan.</p></details>
+    <details><summary><h3>Perangkat apa saja yang didukung?</h3></summary><p>Printer struk thermal 58 / 76 / 80 mm, printer biasa untuk laporan A4 / F4, scanner barcode USB, laci kas yang tersambung ke printer struk, dan printer label barcode.</p></details>
+    <details><summary><h3>Apakah pembaruan menghapus data?</h3></summary><p>Tidak. Pembaruan hanya mengganti program. Data tersimpan terpisah dan dicadangkan otomatis bila struktur database perlu ditingkatkan.</p></details>
+    <details><summary><h3>Apakah Raja Kasir tersedia untuk Android?</h3></summary><p>Raja Kasir dibuat untuk PC dan laptop dengan Windows 10 / 11 atau Linux (Ubuntu, Debian, dan distro lain lewat AppImage).</p></details>
+    <details><summary><h3>Komputer saya rusak atau diinstal ulang, bagaimana lisensinya?</h3></summary><p>Hubungi kami dengan nomor seri lisensi lama dan ID Perangkat baru untuk penggantian key, sesuai ketentuan perjanjian lisensi.</p></details>
   </div>
 </section>
+
+<section class="sec wrap">
+  <div class="final reveal">
+    <h2>Mulai pakai <span class="grad">aplikasi kasir offline</span> hari ini</h2>
+    <p>Unduh gratis, coba di komputer toko Anda, lalu aktifkan dengan key lisensi saat siap berjualan.</p>
+    <div class="cta" style="margin-bottom:0">
+      <a class="btn primary" href="#unduh">Download Raja Kasir</a>
+      <a class="btn" href="https://wa.me/628121858819?text=Halo%20Raja%20Coding%2C%20saya%20ingin%20memesan%20lisensi%20Raja%20Kasir." target="_blank" rel="noopener">Tanya via WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="brand" href="#" style="margin-bottom:12px"><img src="assets/rajakasir-icon.png" alt="">Raja Kasir</a>
-        <p>Sistem kasir &amp; manajemen ritel profesional.</p>
-        <div class="dev"><a href="https://rajacoding.com" target="_blank" rel="noopener"><img src="assets/rajacoding-logo-white.png" alt="Raja Coding"></a></div>
+        <a class="brand" href="./"><img src="assets/rajakasir-icon.png" alt="Logo Raja Kasir" width="34" height="34" loading="lazy">Raja Kasir</a>
+        <p style="margin-top:12px">Aplikasi kasir offline &amp; software POS untuk toko, minimarket, dan grosir.</p>
+        <a class="dev" href="https://rajacoding.com" target="_blank" rel="noopener"><img src="assets/rajacoding-logo-white.png" alt="Raja Coding" loading="lazy"></a>
       </div>
       <div>
         <h4>Pengembang</h4>
@@ -309,8 +516,15 @@
         <a href="mailto:firman.snts@gmail.com">firman.snts@gmail.com</a>
       </div>
       <div>
-        <h4>Tautan</h4>
-        <a href="https://github.com/firexsantos/rajakasir-releases/releases/latest">Unduh versi terbaru</a>
+        <h4>Produk</h4>
+        <a href="#fitur">Fitur aplikasi kasir</a>
+        <a href="#usaha">Kasir untuk minimarket &amp; toko</a>
+        <a href="#offline">Kasir offline vs online</a>
+        <a href="#faq">Tanya jawab</a>
+      </div>
+      <div>
+        <h4>Unduhan</h4>
+        <a href="https://github.com/firexsantos/rajakasir-releases/releases/latest">Download versi terbaru</a>
         <a href="#riwayat">Riwayat versi</a>
         <a href="https://github.com/firexsantos/rajakasir-releases/blob/main/LICENSE">Perjanjian lisensi (EULA)</a>
         <a href="https://github.com/firexsantos/rajakasir-releases">Repositori rilis</a>
@@ -323,26 +537,10 @@
 <script>
 (() => {
   const REPO = 'firexsantos/rajakasir-releases';
-  const icon = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
-  const FEATURES = [
-    ['Kasir cepat', 'Scan barcode termasuk barcode dus, cari nama, diskon, tunai / QRIS / transfer / kartu, tahan transaksi, semua lewat keyboard.', '<path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10M12 7v10M16 7v10"/>'],
-    ['Sesi kasir', 'Modal awal di awal shift, kas masuk / keluar, hitung laci per pecahan saat tutup, selisih tercatat per kasir.', '<rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'],
-    ['Pelanggan & poin', 'Member dengan poin belanja yang bisa ditukar di kasir, harga member, riwayat dan barang favorit per pelanggan.', '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>'],
-    ['Harga & promo', 'Harga grosir bertingkat, jual per dus / pak, promo persen / nominal / harga spesial / beli X gratis Y, PPN.', '<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1.5"/>'],
-    ['Stok & kedaluwarsa', 'Kedaluwarsa per batch dengan peringatan, pemusnahan dengan berita acara, stok opname, pecah barang dus → ecer.', '<path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M9 16l2 2 4-4"/>'],
-    ['Gudang & transfer', 'Stok per gudang, barang masuk langsung ke gudang, transfer dengan surat, isi ulang rak toko otomatis.', '<path d="M22 8.4V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.4a2 2 0 0 1 1.2-1.8l8-3.6a2 2 0 0 1 1.6 0l8 3.6A2 2 0 0 1 22 8.4Z"/><path d="M6 18h12M6 14h12"/>'],
-    ['Pembelian & hutang', 'Purchase order, barang masuk tunai / tempo, hutang supplier dengan umur hutang, retur ke supplier.', '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>'],
-    ['Laporan lengkap', 'Omzet, laba, barang terlaris, pelanggan, pajak, kerugian, jam ramai, nilai persediaan — cetak A4 atau ekspor.', '<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/>'],
-    ['Struk sesuai selera', 'Pembuat struk dengan 6 template, printer thermal 58 / 76 / 80 mm, pratinjau sebelum cetak, barcode nomor struk.', '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/>'],
-    ['Grosir & piutang', 'Faktur untuk reseller, pembayaran cicilan, umur piutang per mitra, cetak faktur A4.', '<path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.9-3.9a3 3 0 0 0-4.2 0l-.9.9a1 1 0 1 1-3-3l2.8-2.8a5.8 5.8 0 0 1 7 .9L21 7"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/>'],
-    ['Backup & keamanan', 'Backup otomatis harian dan saat aplikasi ditutup, pulihkan kapan saja, login PIN, log aktivitas.', '<path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>'],
-    ['Pilihan database', 'SQLite tanpa server untuk satu komputer, atau MySQL / MariaDB / PostgreSQL untuk beberapa kasir sekaligus.', '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>'],
-  ];
-  document.getElementById('features').innerHTML = FEATURES.map(([t, d, p]) => `<div class="feat reveal"><div class="ico">${icon(p)}</div><h3>${t}</h3><p>${d}</p></div>`).join('');
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Reveal on scroll.
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 }) : null;
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 }) : null;
   document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
 
   // Small Markdown renderer for release notes (headings, lists, bold, code, links).
@@ -389,15 +587,13 @@
     const main = win ? find('.exe') : linux ? (/Ubuntu|Debian/i.test(ua) ? find('.deb') : find('.AppImage')) : null;
     if (main) {
       document.getElementById('dl-main').href = main.browser_download_url;
-      document.getElementById('dl-main-label').textContent = `Unduh untuk ${win ? 'Windows' : 'Linux'} · ${v}`;
+      document.getElementById('dl-main-label').textContent = `Download untuk ${win ? 'Windows' : 'Linux'} · ${v}`;
     } else document.getElementById('dl-main').href = '#unduh';
     document.getElementById('dl-sub').textContent = `Versi ${v}, dirilis ${fmtDate(latest.published_at)}. Keaslian berkas dapat diperiksa dengan SHA256SUMS.txt.`;
     document.getElementById('history').innerHTML = rels.map((r, i) => `<details class="rel"${i === 0 ? ' open' : ''}>
       <summary><b>${esc(r.name || r.tag_name)}</b>${i === 0 ? '<span class="tag">TERBARU</span>' : ''}<span class="date">${fmtDate(r.published_at)}</span></summary>
       <div class="body">${md(ownNotes(r.body))}</div></details>`).join('');
-  }).catch(() => {
-    document.getElementById('history').innerHTML = '<p class="small" style="text-align:center">Riwayat versi lengkap ada di <a style="color:var(--a2)" href="https://github.com/firexsantos/rajakasir-releases/releases">halaman rilis GitHub</a>.</p>';
-  });
+  }).catch(() => { /* the static link to the releases page stays */ });
 })();
 </script>
 </body>
