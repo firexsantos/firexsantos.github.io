@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://firexsantos.github.io/sitemap.xml
