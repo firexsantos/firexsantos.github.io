@@ -61,7 +61,7 @@
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Point of Sale",
       "operatingSystem": "Windows 10, Windows 11, Ubuntu, Debian, Linux",
-      "softwareVersion": "0.7.1",
+      "softwareVersion": "0.8.0",
       "dateModified": "2026-10-20",
       "inLanguage": ["id", "en"],
       "url": "https://firexsantos.github.io/rajakasir/",
@@ -80,6 +80,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "Apa itu Raja Kasir?", "acceptedAnswer": { "@type": "Answer", "text": "Raja Kasir adalah aplikasi kasir (software POS) untuk PC dan laptop Windows maupun Linux. Selain transaksi di meja kasir, Raja Kasir mengelola stok barang, pembelian ke supplier, pelanggan dan poin, promo, hingga laporan laba toko." } },
         { "@type": "Question", "name": "Apakah Raja Kasir aplikasi kasir offline?", "acceptedAnswer": { "@type": "Answer", "text": "Ya. Raja Kasir berjalan di komputer toko Anda sendiri, jadi berjualan tetap lancar walaupun internet mati. Internet hanya dipakai untuk mengunduh pembaruan." } },
+        { "@type": "Question", "name": "Apakah ada versi demo atau trial gratis?", "acceptedAnswer": { "@type": "Answer", "text": "Ada. Kunci demo harian bisa diambil gratis di halaman ini dan berlaku di komputer mana saja sampai pukul 23:59 WIB. Semua fitur bisa dicoba; struk selama demo bertanda DEMO, dan data tetap tersimpan saat Anda membeli lisensi." } },
         { "@type": "Question", "name": "Apakah ada biaya bulanan atau berlangganan?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak ada biaya berlangganan bulanan. Lisensi Raja Kasir berlaku seumur hidup untuk satu perangkat." } },
         { "@type": "Question", "name": "Raja Kasir cocok untuk usaha apa saja?", "acceptedAnswer": { "@type": "Answer", "text": "Minimarket dan swalayan, toko kelontong dan sembako, grosir dan agen, toko bangunan, toko pakaian, kosmetik, aksesoris, serta toko ATK. Barang bisa dijual per satuan, per pak, atau per dus dengan harga grosir bertingkat." } },
         { "@type": "Question", "name": "Apakah bisa dipakai di beberapa komputer kasir sekaligus?", "acceptedAnswer": { "@type": "Answer", "text": "Bisa. Untuk satu komputer cukup memakai SQLite tanpa server. Untuk beberapa komputer kasir yang memakai data yang sama, gunakan MySQL / MariaDB atau PostgreSQL di jaringan toko." } },
@@ -207,6 +208,16 @@
   .dl .go { margin-top: 10px; color: var(--a2); font-weight: 600; font-size: 14px; }
   .req { margin: 28px auto 0; max-width: 820px; text-align: center; color: var(--text3); font-size: 14px; }
 
+  /* demo key */
+  .demo { max-width: 860px; margin: 0 auto; padding: 32px; border-radius: 24px; border: 1px solid var(--line2);
+    background: radial-gradient(70% 120% at 0% 0%, rgba(255, 190, 80, .12), transparent 60%), var(--card); }
+  .demo-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .demo-top b { font: 600 18px 'Space Grotesk'; }
+  .demo-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; color: #1a1200; background: linear-gradient(90deg, #ffc94d, #ff9f43); }
+  .demo-key { font: 13px/1.6 ui-monospace, monospace; color: var(--text); padding: 16px 18px; border-radius: 14px; background: rgba(0, 0, 0, .35); border: 1px dashed var(--line2); overflow-wrap: anywhere; user-select: all; }
+  .demo-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+  .demo ul { margin: 22px 0 0; padding-left: 20px; color: var(--text2); display: grid; gap: 8px; font-size: 15px; }
+
   /* history */
   .hist { max-width: 860px; margin: 0 auto; display: grid; gap: 14px; }
   .rel { border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
@@ -286,7 +297,7 @@
   <div class="wrap">
     <a class="brand" href="./"><img src="assets/rajakasir-icon.png" alt="Logo Raja Kasir" width="34" height="34">Raja Kasir</a>
     <div class="links">
-      <a href="#fitur">Fitur</a><a href="#usaha">Jenis usaha</a><a href="#offline">Kasir offline</a><a href="#unduh">Unduh</a><a href="#riwayat">Riwayat versi</a><a href="#faq">Tanya jawab</a>
+      <a href="#fitur">Fitur</a><a href="#usaha">Jenis usaha</a><a href="#offline">Kasir offline</a><a href="#unduh">Unduh</a><a href="#demo">Coba demo</a><a href="#riwayat">Riwayat versi</a><a href="#faq">Tanya jawab</a>
     </div>
     <a class="btn sm primary" href="#pesan">Pesan lisensi</a>
   </div>
@@ -295,7 +306,7 @@
 <main>
 <header class="hero wrap">
   <div class="glow" aria-hidden="true"></div>
-  <span class="pill"><b>●</b> <span id="ver">Versi 0.7.1</span> · Windows &amp; Linux</span>
+  <span class="pill"><b>●</b> <span id="ver">Versi 0.8.0</span> · Windows &amp; Linux</span>
   <h1>Aplikasi Kasir Offline <span class="grad">untuk Toko &amp; Minimarket</span></h1>
   <p class="lead">Raja Kasir adalah <strong>software kasir (POS)</strong> untuk PC dan laptop Windows maupun Linux — kasir cepat dengan scan barcode, stok barang lengkap, laporan laba, dan tetap berjualan walaupun internet mati. Tanpa biaya bulanan.</p>
   <div class="cta">
@@ -308,7 +319,7 @@
       Pesan via WhatsApp
     </a>
   </div>
-  <p class="small">Gratis diunduh · aktifkan dengan key lisensi · satu key untuk satu perangkat, seumur hidup</p>
+  <p class="small">Gratis diunduh · <a href="#demo" style="color:var(--a2)">coba dulu dengan kunci demo hari ini</a> · lisensi seumur hidup untuk satu perangkat</p>
   <div class="shot reveal">
     <picture>
       <source srcset="assets/kasir.webp" type="image/webp">
@@ -462,6 +473,31 @@
   <p class="req">Kebutuhan minimum: prosesor 64-bit · RAM 4 GB · ruang kosong 500 MB · layar 1366×768. Printer struk thermal, scanner barcode, dan laci kas opsional.</p>
 </section>
 
+<section id="demo" class="sec wrap" aria-labelledby="demo-h">
+  <div class="head reveal">
+    <div class="eyebrow">Coba gratis</div>
+    <h2 id="demo-h">Coba aplikasi kasir <span class="grad">gratis hari ini</span></h2>
+    <p>Pakai kunci demo harian untuk mencoba semua fitur Raja Kasir di komputer mana saja. Kuncinya berganti setiap hari pukul 00:00 WIB.</p>
+  </div>
+  <div class="demo reveal">
+    <div class="demo-top"><span class="demo-badge">DEMO</span><b id="demo-date">Kunci demo hari ini</b></div>
+    <div class="demo-key" id="demo-key">Kunci demo hari ini bisa diminta lewat WhatsApp +62 812-1858-819.</div>
+    <div class="demo-actions">
+      <button class="btn primary" id="demo-copy" type="button" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Salin kunci demo</span>
+      </button>
+      <a class="btn" href="#unduh">Download Raja Kasir</a>
+    </div>
+    <ul>
+      <li>Buka Raja Kasir, tempel kunci di layar aktivasi, lalu klik <strong>Aktifkan</strong>.</li>
+      <li>Berlaku sampai pukul <strong>23:59 WIB hari ini</strong>, di komputer mana saja. Besok ambil kunci baru di halaman ini.</li>
+      <li>Selama demo, struk dan dokumen cetak bertanda <strong>DEMO</strong>.</li>
+      <li>Data yang Anda masukkan tetap tersimpan — setelah membeli lisensi, lanjutkan dengan data yang sama.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="riwayat" class="sec wrap" aria-labelledby="riwayat-h">
   <div class="head reveal">
     <div class="eyebrow">Riwayat versi</div>
@@ -477,6 +513,7 @@
   <div class="faq reveal">
     <details><summary><h3>Apa itu Raja Kasir?</h3></summary><p>Raja Kasir adalah aplikasi kasir (software POS) untuk PC dan laptop Windows maupun Linux. Selain transaksi di meja kasir, Raja Kasir mengelola stok barang, pembelian ke supplier, pelanggan dan poin, promo, hingga laporan laba toko.</p></details>
     <details><summary><h3>Apakah Raja Kasir aplikasi kasir offline?</h3></summary><p>Ya. Raja Kasir berjalan di komputer toko Anda sendiri, jadi berjualan tetap lancar walaupun internet mati. Internet hanya dipakai untuk mengunduh pembaruan.</p></details>
+    <details><summary><h3>Apakah ada versi demo atau trial gratis?</h3></summary><p>Ada. Kunci demo harian bisa diambil gratis di halaman ini dan berlaku di komputer mana saja sampai pukul 23:59 WIB. Semua fitur bisa dicoba; struk selama demo bertanda DEMO, dan data tetap tersimpan saat Anda membeli lisensi.</p></details>
     <details><summary><h3>Apakah ada biaya bulanan atau berlangganan?</h3></summary><p>Tidak ada biaya berlangganan bulanan. Lisensi Raja Kasir berlaku seumur hidup untuk satu perangkat.</p></details>
     <details><summary><h3>Raja Kasir cocok untuk usaha apa saja?</h3></summary><p>Minimarket dan swalayan, toko kelontong dan sembako, grosir dan agen, toko bangunan, toko pakaian, kosmetik, aksesoris, serta toko ATK. Barang bisa dijual per satuan, per pak, atau per dus dengan harga grosir bertingkat.</p></details>
     <details><summary><h3>Apakah bisa dipakai di beberapa komputer kasir sekaligus?</h3></summary><p>Bisa. Untuk satu komputer cukup memakai SQLite tanpa server. Untuk beberapa komputer kasir yang memakai data yang sama, gunakan MySQL / MariaDB atau PostgreSQL di jaringan toko.</p></details>
@@ -570,6 +607,29 @@
   };
   const fmtDate = (s) => new Date(s).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
   const fmtSize = (n) => `${(n / 1048576).toFixed(0)} MB`;
+
+  // Today's demo key (WIB date) from the year of keys published next to this page.
+  const wib = () => new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
+  function showDemo() {
+    fetch('demo-keys.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : Promise.reject(r.status))).then((d) => {
+      const today = wib(), key = d.keys?.[today];
+      if (!key) return;
+      const label = new Date(`${today}T12:00:00Z`).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+      document.getElementById('demo-date').textContent = `Kunci demo · ${label}`;
+      document.getElementById('demo-key').textContent = key;
+      const btn = document.getElementById('demo-copy');
+      btn.hidden = false;
+      btn.onclick = async () => {
+        try { await navigator.clipboard.writeText(key); } catch { getSelection().selectAllChildren(document.getElementById('demo-key')); document.execCommand('copy'); }
+        btn.querySelector('span').textContent = 'Tersalin ✓';
+        setTimeout(() => { btn.querySelector('span').textContent = 'Salin kunci demo'; }, 2000);
+      };
+      // Switch to the new key at midnight WIB while the page stays open.
+      const ms = Date.parse(`${today}T17:00:00Z`) - Date.now() + 1000;
+      setTimeout(showDemo, Math.max(60e3, ms));
+    }).catch(() => { /* the WhatsApp fallback text stays */ });
+  }
+  showDemo();
 
   fetch(`https://api.github.com/repos/${REPO}/releases?per_page=12`).then((r) => (r.ok ? r.json() : Promise.reject(r.status))).then((rels) => {
     rels = rels.filter((r) => !r.draft && !r.prerelease);
